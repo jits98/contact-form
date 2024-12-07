@@ -1,0 +1,122 @@
+body {
+  background-color: hsl(148, 38%, 91%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", Arial;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  background-color: white;
+  padding: 30px 30px;
+  border-radius: 12px;
+}
+
+.name-text {
+  font-size: 15px;
+  color: hsl(187, 24%, 22%);
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.asterisk {
+  color: hsl(186, 15%, 59%);
+}
+
+.heading {
+  font-weight: 700;
+  color: hsl(187, 24%, 22%);
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.first-block {
+  display: flex;
+  column-gap: 12px;
+  font-size: 16px;
+}
+
+.name-bar {
+  font-size: 16px;
+  width: 242px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid hsl(186, 15%, 59%);
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.email-bar {
+  font-size: 16px;
+  width: 520px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid hsl(186, 15%, 59%);
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.query-box {
+  width: 240px;
+  padding: 12px 12px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.third-block {
+  display: flex;
+  column-gap: 12px;
+}
+
+.radio-check {
+  accent-color: hsl(169, 82%, 27%);
+}
+
+.footer {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.message-bar {
+  font-size: 16px;
+  width: 520px;
+  height: 76px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid hsl(186, 15%, 59%);
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.checkbox-1 {
+  margin-bottom: 0;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.footer-text {
+  cursor: pointer;
+}
+
+.submit-button {
+  color: white;
+  background-color: hsl(169, 82%, 27%);
+  border: none;
+  width: 542px;
+  border-radius: 6px;
+  padding: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Active State Style */
+
+input:focus {
+  border-color: hsl(169, 82%, 27%);
+}

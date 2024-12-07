@@ -4,40 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Karla:wght@400,700&display=swap"
+    />
   </head>
   <body>
-    <div>
-      <h2>Contact Us</h2>
-      <div>
+    <div class="main-container">
+      <h2 class="heading">Contact Us</h2>
+
+      <div class="first-block">
         <div>
-          <p>First Name &#42;</p>
-          <input type="text" />
+          <p class="name-text">
+            First Name <span class="asterisk"> &#42;</span>
+          </p>
+          <input
+            type="text"
+            class="name-bar"
+            onfocus="border.color='hsl(186, 15%, 59%)'"
+          />
         </div>
         <div>
-          <p>Last Name &#42;</p>
-          <input type="text" />
+          <p class="name-text">
+            Last Name <span class="asterisk"> &#42;</span>
+          </p>
+          <input type="text" class="name-bar" />
         </div>
       </div>
-      <div>
-        <p>Email Address &#42;</p>
-        <input type="email" />
-      </div>
-      <div>
-        <p>Query Type &#42;</p>
 
-        <div><input name="query-type" type="radio" /> General Enquiry</div>
-        <div><input name="query-type" type="radio" /> Support Request</div>
+      <div class="second-block">
+        <p class="name-text">
+          Email Address <span class="asterisk"> &#42;</span>
+        </p>
+        <input type="email" class="email-bar" />
       </div>
 
-      <div>
-        <p>Message &#42;</p>
-        <input type="text" />
+      <p class="name-text">Query Type <span class="asterisk"> &#42;</span></p>
+      <div class="third-block">
+        <div class="query-box">
+          <input name="query-type" class="radio-check" type="radio" /> General
+          Enquiry
+        </div>
+        <div class="query-box">
+          <input name="query-type" class="radio-check" type="radio" /> Support
+          Request
+        </div>
       </div>
-      <div>
-        <input type="checkbox" />
-        <p>I consent to being contacted by the team &#42;</p>
+
+      <div class="fourth-block">
+        <p class="name-text" class="asterisk">
+          Message <span class="asterisk"> &#42;</span>
+        </p>
+        <textarea name="text" class="message-bar"> </textarea>
       </div>
-      <button>Submit</button>
+
+      <label class="footer">
+        <input type="checkbox" class="checkbox-1" />
+        <span class="name-text footer-text">
+          I consent to being contacted by the team
+          <span class="asterisk"> &#42;</span>
+        </span>
+      </label>
+
+      <button class="submit-button">Submit</button>
     </div>
   </body>
 </html>
