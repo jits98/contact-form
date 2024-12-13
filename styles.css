@@ -23,6 +23,7 @@ body {
 
 .asterisk {
   color: hsl(186, 15%, 59%);
+  margin-left: 4px;
 }
 
 .heading {
@@ -36,6 +37,14 @@ body {
   display: flex;
   column-gap: 12px;
   font-size: 16px;
+}
+
+.first-name-block,
+.last-name-block,
+.second-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 .name-bar {
@@ -63,7 +72,7 @@ body {
   padding: 12px 12px;
   border: 1px solid hsl(186, 15%, 59%);
   border-radius: 6px;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   cursor: pointer;
 }
 
@@ -76,11 +85,10 @@ body {
   accent-color: hsl(169, 82%, 27%);
 }
 
-.footer {
+.fourth-block {
   display: flex;
-  vertical-align: middle;
-  align-items: center;
-  column-gap: 12px;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 .message-bar {
@@ -94,14 +102,52 @@ body {
   cursor: pointer;
 }
 
-.checkbox-1 {
-  margin-bottom: 0;
+/* Style for the checkbox container */
+.checkbox-container {
+  position: relative;
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  padding-left: 30px;
+  font-size: 15px;
   cursor: pointer;
-  border-radius: 100%;
+  color: hsl(187, 24%, 22%);
+  align-items: center;
 }
 
-.footer-text {
-  cursor: pointer;
+/* Hide the default checkbox */
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+/* Create a custom square checkbox */
+.checkbox-container .checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #333; /* Border color */
+  background-color: white; /* Default background color */
+}
+
+/* When the checkbox is checked, change the background color */
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+  background-color: hsl(169, 82%, 27%); /* Green background */
+  border-color: hsl(169, 82%, 27%); /* Green border */
+}
+
+/* Add a checkmark when checked */
+.checkbox-container input[type="checkbox"]:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .submit-button {
@@ -117,6 +163,17 @@ body {
 
 /* Active State Style */
 
-input:focus {
-  border-color: hsl(169, 82%, 27%);
+.name-bar:focus {
+  outline: none;
+  border: 1.5px solid hsl(169, 82%, 27%);
+}
+.email-bar:focus {
+  outline: none;
+  border: 1.5px solid hsl(169, 82%, 27%);
+}
+
+/* js elements styling */
+
+.js-blank-output {
+  color: red;
 }
