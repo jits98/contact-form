@@ -15,29 +15,26 @@
       <h2 class="heading">Contact Us</h2>
 
       <div class="first-block">
-        <div>
-          <p class="name-text">
+        <div class="first-name-block">
+          <label for="name-text-1">
             First Name <span class="asterisk"> &#42;</span>
-          </p>
-          <input
-            type="text"
-            class="name-bar"
-            onfocus="border.color='hsl(186, 15%, 59%)'"
-          />
+          </label>
+          <input type="text" id="name-text-1" class="name-bar js-name" " />
         </div>
-        <div>
-          <p class="name-text">
+        <div class="last-name-block">
+          <label for="name-text-2">
             Last Name <span class="asterisk"> &#42;</span>
-          </p>
-          <input type="text" class="name-bar" />
+          </label>
+          <input type="text" id="name-text-2" class="name-bar" />
         </div>
       </div>
+      <p class="js-blank-output"></p>
 
       <div class="second-block">
-        <p class="name-text">
+        <label for="email-text">
           Email Address <span class="asterisk"> &#42;</span>
-        </p>
-        <input type="email" class="email-bar" />
+        </label>
+        <input type="email" id="email-text" class="email-bar" />
       </div>
 
       <p class="name-text">Query Type <span class="asterisk"> &#42;</span></p>
@@ -53,21 +50,20 @@
       </div>
 
       <div class="fourth-block">
-        <p class="name-text" class="asterisk">
+        <label for="msg-text-3">
           Message <span class="asterisk"> &#42;</span>
-        </p>
-        <textarea name="text" class="message-bar"> </textarea>
+        </label>
+        <textarea name="text" id="msg-text-3" class="message-bar"> </textarea>
       </div>
 
-      <label class="footer">
-        <input type="checkbox" class="checkbox-1" />
-        <span class="name-text footer-text">
-          I consent to being contacted by the team
-          <span class="asterisk"> &#42;</span>
-        </span>
+      <label class="checkbox-container">
+        <input type="checkbox" class="checkbox" />
+        <span class="checkmark"></span> I consent to being contacted by the team
+        <span class="asterisk"> &#42;</span>
       </label>
 
-      <button class="submit-button">Submit</button>
+      <button class="submit-button" onclick="submit()">Submit</button>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
