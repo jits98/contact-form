@@ -177,6 +177,11 @@ body {
   border: 1.5px solid hsl(169, 82%, 27%);
 }
 
+.message-bar:focus {
+  outline: none;
+  border: 1.5px solid hsl(169, 82%, 27%);
+}
+
 /* js elements styling */
 
 .js-blank-output {
