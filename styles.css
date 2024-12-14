@@ -67,18 +67,23 @@ body {
   cursor: pointer;
 }
 
-.query-box {
-  width: 240px;
-  padding: 12px 12px;
+.query-box-type,
+.query-box-type-2 {
+  width: 400px;
+  padding-right: 100px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: 1px solid hsl(186, 15%, 59%);
   border-radius: 6px;
-  margin-bottom: 24px;
   cursor: pointer;
 }
 
 .third-block {
   display: flex;
   column-gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .radio-check {
