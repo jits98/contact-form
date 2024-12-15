@@ -1,11 +1,48 @@
 body {
   background-color: hsl(148, 38%, 91%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Karla", Arial;
   height: 100vh;
   overflow: hidden;
+}
+
+.toast {
+  display: none;
+  padding-top: 20px;
+  padding-right: 22px;
+  padding-left: 22px;
+  padding-bottom: 10px;
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(187, 27%, 76%);
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 0;
+  border-radius: 12px;
+}
+
+.toast-first-line {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.message-toast {
+  margin-top: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.circle {
+  background-color: white;
+  color: white;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 0;
 }
 
 .main-container {
@@ -29,8 +66,8 @@ body {
 .heading {
   font-weight: 700;
   color: hsl(187, 24%, 22%);
-  margin: 0;
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
 .first-block {
@@ -53,8 +90,12 @@ body {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid hsl(186, 15%, 59%);
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   cursor: pointer;
+}
+
+.second-block {
+  margin-top: 20px;
 }
 
 .email-bar {
@@ -63,17 +104,16 @@ body {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid hsl(186, 15%, 59%);
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   cursor: pointer;
 }
 
 .query-box-type,
 .query-box-type-2 {
-  width: 400px;
   padding-right: 100px;
   padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border: 1px solid hsl(186, 15%, 59%);
   border-radius: 6px;
   cursor: pointer;
@@ -94,6 +134,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+  margin-top: 24px;
 }
 
 .message-bar {
@@ -112,7 +153,7 @@ body {
   position: relative;
   display: flex;
   margin-top: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   padding-left: 30px;
   font-size: 15px;
   cursor: pointer;
@@ -166,6 +207,10 @@ body {
   margin-top: 20px;
 }
 
+.submit-button:active {
+  background-color: hsl(168, 88%, 14%);
+}
+
 /* Active State Style */
 
 .name-bar:focus {
@@ -184,6 +229,22 @@ body {
 
 /* js elements styling */
 
-.js-blank-output {
+.js-blank-output,
+.js-blank-output-2 {
+  display: none;
+  margin-top: 0px;
+  margin-bottom: 6px;
   color: red;
+  font-size: 14px;
+}
+
+.js-blank-output-3,
+.js-blank-output-4,
+.js-blank-output-5,
+.js-blank-output-6 {
+  display: none;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  color: red;
+  font-size: 14px;
 }
