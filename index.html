@@ -11,7 +11,8 @@
     />
   </head>
   <body>
-    <div class="main-container">
+    <div class="toast"></div>
+    <form class="main-container">
       <h2 class="heading">Contact Us</h2>
 
       <div class="first-block">
@@ -20,21 +21,23 @@
             First Name <span class="asterisk"> &#42;</span>
           </label>
           <input type="text" id="name-text-1" class="name-bar js-name" " />
+          <p class="js-blank-output"></p>
         </div>
         <div class="last-name-block">
           <label for="name-text-2">
             Last Name <span class="asterisk"> &#42;</span>
           </label>
-          <input type="text" id="name-text-2" class="name-bar" />
+          <input type="text" id="name-text-2" class="name-bar js-name-2" />
+          <p class="js-blank-output-2"></p>
         </div>
       </div>
-      <p class="js-blank-output"></p>
 
       <div class="second-block">
         <label for="email-text">
           Email Address <span class="asterisk"> &#42;</span>
         </label>
-        <input type="email" id="email-text" class="email-bar" />
+        <input type="email" id="email-text" class="email-bar js-email" />
+        <p class="js-blank-output-3"></p>
       </div>
 
       <p class="name-text">Query Type <span class="asterisk"> &#42;</span></p>
@@ -46,6 +49,7 @@
               id="query-type-box"
               class="radio-check"
               type="radio"
+              onclick="chBackcolor('red')"
             />
             General Enquiry
           </label>
@@ -58,27 +62,35 @@
               id="query-type-box-2"
               class="radio-check"
               type="radio"
+              onclick="chBackcolor('red')"
             />
             Support Request
           </label>
         </div>
       </div>
+      <p class="js-blank-output-4"></p>
 
       <div class="fourth-block">
         <label for="msg-text-3">
           Message <span class="asterisk"> &#42;</span>
         </label>
-        <textarea name="text" id="msg-text-3" class="message-bar"> </textarea>
+        <textarea
+          name="message"
+          id="msg-text-3"
+          class="message-bar js-msg-bar"
+        ></textarea>
+        <p class="js-blank-output-5"></p>
       </div>
 
       <label class="checkbox-container">
-        <input type="checkbox" class="checkbox" />
+        <input type="checkbox" class="checkbox js-checkbox" />
         <span class="checkmark"></span> I consent to being contacted by the team
         <span class="asterisk"> &#42;</span>
       </label>
+      <p class="js-blank-output-6"></p>
 
-      <button class="submit-button" onclick="submit()">Submit</button>
-    </div>
+      <input class="submit-button" type="button" value="Submit" />
+    </form>
     <script src="script.js"></script>
   </body>
 </html>
