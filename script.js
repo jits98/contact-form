@@ -19,8 +19,6 @@ function submit() {
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-  //const errorMessage1 = document.querySelector(".js-blank-output");
-
   if (inputElement.value.trim() === "") {
     document.querySelector(".js-blank-output").innerHTML =
       "This field is required";
