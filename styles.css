@@ -249,16 +249,35 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 480px) and (max-height: 900px) {
+/* Responsive Design for Mobile */
+
+@media (max-width: 480px) and (max-height: 960px) {
   body {
-    height: 56.25rem;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: auto;
   }
   .main-container {
-    width: 22rem;
-    height: 48rem;
+    width: auto;
+    height: auto;
+  }
+
+  .js-name,
+  .js-name-2,
+  .email-bar,
+  .radio-check-2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .second-block,
+  .name-text {
+    margin-top: 0;
+  }
+
+  .fourth-block {
+    margin-top: 0rem;
   }
 
   .first-block,
@@ -269,7 +288,7 @@ body {
   }
 
   .third-block {
-    row-gap: 32px;
+    row-gap: 42px;
   }
 
   .fourth-block {
@@ -283,9 +302,12 @@ body {
   }
 
   .name-bar,
-  .email-bar,
-  .submit-button {
+  .email-bar {
     width: 20rem;
+  }
+
+  .submit-button {
+    width: 21.5rem;
   }
   .query-box-type {
     padding-right: 11.4rem;
