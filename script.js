@@ -78,9 +78,11 @@ function chBackcolor(color) {
 
   if (isRadioChecked2) {
     document.querySelector(".query-box-type").style.background = color;
+    document.querySelector(".query-box-type-2").style = "none";
   }
 
   if (isRadioChecked3) {
+    document.querySelector(".query-box-type").style = "none";
     document.querySelector(".query-box-type-2").style.background = color;
   }
 }
