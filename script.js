@@ -13,21 +13,9 @@ function submit() {
 
   const isChecked = document.querySelector(".js-checkbox").checked;
 
-  const isRadioChecked = document.querySelector(".radio-check").checked;
+  const isRadioChecked = document.querySelector(".radio-check-1").checked;
 
-  //Email Validation Code
-  const isValidEmail = (inputElement3) => {
-    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    return !!inputElement3.match(pattern);
-  };
-
-  if (!inputElement3) {
-    document.querySelector(".js-blank-output-3").innerHTML =
-      "Please enter a valid email address";
-    document.querySelector(".js-email").style.borderColor = "red";
-    document.querySelector(".js-blank-output-3").style.display = "block";
-  }
+  const isRadioChecked1 = document.querySelector(".radio-check-2").checked;
 
   if (!inputElement) {
     document.querySelector(".js-blank-output").innerHTML =
@@ -43,7 +31,14 @@ function submit() {
     document.querySelector(".js-blank-output-2").style.display = "block";
   }
 
-  if (!isRadioChecked) {
+  if (!inputElement3) {
+    document.querySelector(".js-blank-output-3").innerHTML =
+      "Please enter a valid email address";
+    document.querySelector(".js-email").style.borderColor = "red";
+    document.querySelector(".js-blank-output-3").style.display = "block";
+  }
+
+  if (!isRadioChecked && !isRadioChecked1) {
     document.querySelector(".js-blank-output-4").innerHTML =
       "Please select a query type";
     document.querySelector(".js-blank-output-4").style.display = "block";
@@ -77,11 +72,15 @@ function submit() {
 }
 
 function chBackcolor(color) {
-  if (isRadioChecked) {
+  const isRadioChecked2 = document.querySelector(".radio-check-1").checked;
+
+  const isRadioChecked3 = document.querySelector(".radio-check-2").checked;
+
+  if (isRadioChecked2) {
     document.querySelector(".query-box-type").style.background = color;
   }
 
-  if (isRadioChecked2) {
+  if (isRadioChecked3) {
     document.querySelector(".query-box-type-2").style.background = color;
   }
 }
