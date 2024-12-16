@@ -264,20 +264,22 @@ body {
     height: auto;
   }
 
-  .js-name,
-  .js-name-2,
-  .email-bar,
-  .radio-check-2 {
-    margin-bottom: 1.5rem;
+  .last-name-block,
+  .second-block,
+  .fourth-block {
+    margin-top: 1.5rem;
   }
 
-  .second-block,
-  .name-text {
+  .js-blank-output,
+  .js-blank-output-2 {
+    margin-bottom: 0;
     margin-top: 0;
   }
 
   .fourth-block {
     margin-top: 0rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .first-block,
@@ -289,11 +291,6 @@ body {
 
   .third-block {
     row-gap: 42px;
-  }
-
-  .fourth-block {
-    display: flex;
-    flex-direction: column;
   }
 
   .message-bar {
