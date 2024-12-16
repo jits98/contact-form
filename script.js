@@ -17,6 +17,8 @@ function submit() {
 
   const isRadioChecked1 = document.querySelector(".radio-check-2").checked;
 
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
   if (!inputElement) {
     document.querySelector(".js-blank-output").innerHTML =
       "This field is required";
@@ -31,7 +33,7 @@ function submit() {
     document.querySelector(".js-blank-output-2").style.display = "block";
   }
 
-  if (!inputElement3) {
+  if (!inputElement3 || !emailRegex.test(inputElement3)) {
     document.querySelector(".js-blank-output-3").innerHTML =
       "Please enter a valid email address";
     document.querySelector(".js-email").style.borderColor = "red";
@@ -58,12 +60,14 @@ function submit() {
   }
 
   if (
-    inputElement &&
-    inputElement2 &&
-    inputElement3 &&
-    inputElement5 &&
-    isChecked &&
-    isRadioChecked
+    (inputElement &&
+      inputElement2 &&
+      inputElement3 &&
+      emailRegex.test(inputElement3) &&
+      inputElement5 &&
+      isChecked &&
+      isRadioChecked) ||
+    isRadioChecked1
   ) {
     document.querySelector(".toast").innerHTML =
       "<div class=toast-first-line><img src='tick-circle.svg' class='circle'><span class='message-toast'>Message Sent!</span></div> <p> Thanks for completing the form. We'll be in touch soon!</p>";
