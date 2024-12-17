@@ -10,7 +10,8 @@ body {
 }
 
 .toast {
-  display: none;
+  display: block;
+  margin-top: -60px;
   padding-top: 20px;
   padding-right: 22px;
   padding-left: 22px;
@@ -19,8 +20,14 @@ body {
   color: hsl(187, 27%, 76%);
   align-items: center;
   font-size: 12px;
-  margin-bottom: 0;
   border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .toast-first-line {
@@ -33,7 +40,6 @@ body {
   color: white;
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 0;
 }
 
 .circle {
@@ -239,12 +245,18 @@ body {
 }
 
 .js-blank-output-3,
-.js-blank-output-4,
-.js-blank-output-5,
-.js-blank-output-6 {
+.js-blank-output-4 {
   display: none;
   margin-top: 0px;
   margin-bottom: 8px;
+  color: red;
+  font-size: 14px;
+}
+
+.js-blank-output-5,
+.js-blank-output-6 {
+  margin: 0px;
+  display: none;
   color: red;
   font-size: 14px;
 }
