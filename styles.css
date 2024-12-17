@@ -6,10 +6,11 @@ body {
   align-items: center;
   font-family: "Karla", Arial;
   height: 100vh;
-  overflow: hidden;
 }
 
 .toast {
+  position: absolute;
+  top: 0.6rem;
   padding-top: 20px;
   padding-right: 22px;
   padding-left: 22px;

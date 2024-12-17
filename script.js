@@ -59,6 +59,7 @@ function submit() {
 function handleFirstNameSubmit() {
   if (inputElement.value.trim() === "") {
     jsBlankOutput1.innerHTML = "This field is required";
+    inputElement.value = "";
     jsName1.style.borderColor = "red";
     jsBlankOutput1.style.display = "block";
   }
@@ -67,16 +68,20 @@ function handleFirstNameSubmit() {
 function handleLastNameSubmit() {
   if (inputElement2.value.trim() === "") {
     jsBlankOutput2.innerHTML = "This field is required";
+    inputElement2.value = "";
     jsName2.style.borderColor = "red";
     jsBlankOutput2.style.display = "block";
   }
 }
 
 function handleEmailSubmit() {
-  if (
-    inputElement3.value.trim() === "" ||
-    !emailRegex.test(inputElement3.value)
-  ) {
+  if (inputElement3.value.trim() === "") {
+    jsBlankOutput3.innerHTML = "This field is required";
+    jsEmail.style.borderColor = "red";
+    jsBlankOutput3.style.display = "block";
+  }
+
+  if (!emailRegex.test(inputElement3.value)) {
     jsBlankOutput3.innerHTML = "Please enter a valid email address";
     jsEmail.style.borderColor = "red";
     jsBlankOutput3.style.display = "block";
@@ -93,6 +98,7 @@ function handleQuerySubmit() {
 function handleMsgSubmit() {
   if (inputElement5.value.trim() === "") {
     jsBlankOutput5.innerHTML = "This field is required";
+    inputElement5.value = "";
     jsMsgBar.style.borderColor = "red";
     jsBlankOutput5.style.display = "block";
   }
@@ -120,8 +126,9 @@ function handleToastMsgSubmit() {
       "<div class=toast-first-line><img src='tick-circle.svg' class='circle'><span class='message-toast'>Message Sent!</span></div> <p> Thanks for completing the form. We'll be in touch soon!</p>";
     toastMsg.classList.add("show");
 
-    setTimeout(() => {
+    const timerId = setTimeout(() => {
       toastMsg.classList.remove("show");
+      clearTimeout(timerId);
     }, 2000);
   }
 }
