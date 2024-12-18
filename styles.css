@@ -11,6 +11,7 @@ body {
 .toast {
   position: absolute;
   top: 0.6rem;
+  margin-left: 6rem;
   padding-top: 20px;
   padding-right: 22px;
   padding-left: 22px;
